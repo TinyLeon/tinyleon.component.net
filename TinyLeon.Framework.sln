@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinyLeon.Test", "TinyLeon.U
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinyLeon.Component.MongoDB", "TinyLeon.Component.MongoDB\TinyLeon.Component.MongoDB.csproj", "{8A6CBF52-DE0C-4585-86BF-4A394EB8B94D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinyLeon.Sort", "TinyLeon.Sort\TinyLeon.Sort.csproj", "{D5EEB83F-E571-496E-AD74-230A621B471F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{8A6CBF52-DE0C-4585-86BF-4A394EB8B94D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A6CBF52-DE0C-4585-86BF-4A394EB8B94D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A6CBF52-DE0C-4585-86BF-4A394EB8B94D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5EEB83F-E571-496E-AD74-230A621B471F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5EEB83F-E571-496E-AD74-230A621B471F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5EEB83F-E571-496E-AD74-230A621B471F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5EEB83F-E571-496E-AD74-230A621B471F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
