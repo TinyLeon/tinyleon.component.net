@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 using TinyLeon.Test.MongoDBTest;
+using TinyLeon.Utility;
 
 namespace TinyLeon.Utility.Test
 {
@@ -12,7 +13,8 @@ namespace TinyLeon.Utility.Test
     {
         static void Main(string[] args)
         {
-            ReadDataFromMongo();
+            //ReadDataFromMongo();
+            DistinctTest();
         }
 
         private static void Jsonserialize()
@@ -47,6 +49,17 @@ namespace TinyLeon.Utility.Test
                     MongoDB.Driver.Builders.Query.EQ("ToId.Uid", "52aabc9bbd70fda20f4a49cbbbaada72")
                     )).SetLimit(2).ToList();
             Console.WriteLine(string.Format("读出{0}条数据", historyList.Count));
+        }
+
+        private static IList<Person> DistinctTest()
+        {
+            List<Person> personList = new List<Person>();
+            personList.Add(new Person { Name = "1", Age = 1 });
+            personList.Add(new Person { Name = "2", Age = 1 });
+            personList.Add(new Person { Name = "3", Age = 1 });
+            personList.Add(new Person { Name = "1", Age = 2 });
+            var noDuplicatedList = personList.Distinct(p => p.Age).ToList();
+            return noDuplicatedList;
         }
     }
 

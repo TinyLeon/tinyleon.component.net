@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="DataTable.ToList.cs" />
     <Compile Include="DateTimeHelper.cs" />
+    <Compile Include="DistinctExtensions.cs" />
     <Compile Include="EntityHelper.cs" />
     <Compile Include="HttpHelper.cs" />
     <Compile Include="IEnumerable.ToDataTable.cs" />
