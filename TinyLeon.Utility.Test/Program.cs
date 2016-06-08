@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
@@ -14,7 +15,8 @@ namespace TinyLeon.Utility.Test
         static void Main(string[] args)
         {
             //ReadDataFromMongo();
-            DistinctTest();
+            //DistinctTest();
+            EntityToDataTable();
         }
 
         private static void Jsonserialize()
@@ -60,6 +62,18 @@ namespace TinyLeon.Utility.Test
             personList.Add(new Person { Name = "1", Age = 2 });
             var noDuplicatedList = personList.Distinct(p => p.Age).ToList();
             return noDuplicatedList;
+        }
+
+        private static void EntityToDataTable()
+        {
+            List<Person> personList = new List<Person>();
+            personList.Add(new Person { Name = "1", Age = 1 });
+            personList.Add(new Person { Name = "2", Age = 1 });
+            personList.Add(new Person { Name = "3", Age = 1 });
+            personList.Add(new Person { Name = "1", Age = 2 });
+            ExcelHelper eh = new ExcelHelper(@"E:\myExcel.xlsx");
+            DataTable dt = eh.EntityToDataTable<Person>(personList);
+            eh.DataTableToExcel(dt, "Person", true);
         }
     }
 
