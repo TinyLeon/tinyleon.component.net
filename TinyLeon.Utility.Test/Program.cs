@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -16,7 +17,9 @@ namespace TinyLeon.Utility.Test
         {
             //ReadDataFromMongo();
             //DistinctTest();
-            EntityToDataTable();
+            //EntityToDataTable();
+            var list = TestEnum.Apple.GetSelectItemList();
+            string des = EnumHelper.GetEnumByValue<TestEnum>(1).GetEnumDes();
         }
 
         private static void Jsonserialize()
@@ -87,5 +90,13 @@ namespace TinyLeon.Utility.Test
         [DataMemberAttribute]
         public DateTime BirthDate { get; set; }
         public List<string> ClotheColor { get; set; }
+    }
+
+    enum TestEnum
+    {
+        [Description("苹果")]
+        Apple = 1,
+        [Description("橙子")]
+        Orange = 2
     }
 }
