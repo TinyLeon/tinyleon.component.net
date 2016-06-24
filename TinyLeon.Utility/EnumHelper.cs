@@ -102,6 +102,31 @@ namespace TinyLeon.Utility
             return default(T);
         }
 
-        
+        /// <summary>
+        /// 根据Description获取枚举
+        /// </summary>
+        /// <typeparam name="T">枚举类型</typeparam>
+        /// <param name="description">枚举描述</param>
+        /// <returns>枚举</returns>
+        public static T GetEnumByDescription<T>(string description)
+        {
+            Type _type = typeof(T);
+            foreach (FieldInfo field in _type.GetFields())
+            {
+                DescriptionAttribute[] curDesc = field.GetCustomAttributes(typeof(DescriptionAttribute), false) as DescriptionAttribute[];
+                if (curDesc != null && curDesc.Length > 0)
+                {
+                    if (curDesc[0].Description == description)
+                        return (T)field.GetValue(null);
+                }
+                else
+                {
+                    if (field.Name == description)
+                        return (T)field.GetValue(null);
+                }
+            }
+            //throw new ArgumentException(string.Format("{0} 未能找到对应的枚举.", description), "Description");
+            return default(T);
+        }
     }
 }

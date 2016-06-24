@@ -19,7 +19,7 @@ namespace TinyLeon.Utility.Test
             //DistinctTest();
             //EntityToDataTable();
             var list = TestEnum.Apple.GetSelectItemList();
-            string des = EnumHelper.GetEnumByValue<TestEnum>(1).GetEnumDes();
+            string des = EnumHelper.GetEnumByDescription<TestEnum>("梨子").GetEnumDes();
         }
 
         private static void Jsonserialize()
