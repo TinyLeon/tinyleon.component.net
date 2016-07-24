@@ -89,7 +89,7 @@ namespace TinyLeon.Component.Utility
                     return Enum.IsDefined(typeof(T), value) ? (T)Enum.ToObject(typeof(T), value) : default(T);
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }
