@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Data;
 
-namespace Starry
+namespace TinyLeon.Component.Utility
 {
     public static partial class DataTableExtend
     {

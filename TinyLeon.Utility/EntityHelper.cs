@@ -9,7 +9,7 @@ using System.Data;
 using System.Reflection;
 using System.Collections;
 
-namespace TinyLeon.Utility
+namespace TinyLeon.Component.Utility
 {
     public class EntityHelper
     {

@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinyLeon.Utility", "TinyLeon.Utility\TinyLeon.Utility.csproj", "{9E16081E-8849-49E4-AB2B-7ADB716563DA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinyLeon.Component.Utility", "TinyLeon.Utility\TinyLeon.Component.Utility.csproj", "{9E16081E-8849-49E4-AB2B-7ADB716563DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinyLeon.Test", "TinyLeon.Utility.Test\TinyLeon.Test.csproj", "{516BD9D4-38E7-4BB1-B15F-0169ED69E415}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinyLeon.Component.Test", "TinyLeon.Utility.Test\TinyLeon.Component.Test.csproj", "{516BD9D4-38E7-4BB1-B15F-0169ED69E415}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinyLeon.Component.MongoDB", "TinyLeon.Component.MongoDB\TinyLeon.Component.MongoDB.csproj", "{8A6CBF52-DE0C-4585-86BF-4A394EB8B94D}"
 EndProject

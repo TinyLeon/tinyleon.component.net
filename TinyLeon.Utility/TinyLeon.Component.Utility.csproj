@@ -7,8 +7,8 @@
     <ProjectGuid>{9E16081E-8849-49E4-AB2B-7ADB716563DA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TinyLeon.Utility</RootNamespace>
-    <AssemblyName>TinyLeon.Utility</AssemblyName>
+    <RootNamespace>TinyLeon.Component.Utility</RootNamespace>
+    <AssemblyName>TinyLeon.Component.Utility</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

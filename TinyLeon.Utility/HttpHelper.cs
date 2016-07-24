@@ -5,7 +5,7 @@ using System.Web;
 using System.IO;
 using System.IO.Compression;
 
-namespace TinyLeon.Utility
+namespace TinyLeon.Component.Utility
 {
     /// <summary>
     /// Http请求帮助类

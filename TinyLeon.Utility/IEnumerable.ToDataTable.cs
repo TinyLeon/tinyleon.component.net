@@ -4,7 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 
-namespace Starry
+namespace TinyLeon.Component.Utility
 {
     public static partial class IEnumerableExtend
     {

@@ -7,10 +7,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 
-namespace TinyLeon.Utility
+namespace TinyLeon.Component.Utility
 {
     public static class EnumHelper
     {
+        /// <summary>
+        /// 根据枚举值获取前端下拉菜单数据源
+        /// </summary>
+        /// <param name="value">枚举值</param>
+        /// <param name="selectedValue">被选中的值</param>
+        /// <param name="emptyChoice">空选项 例如“请选择”</param>
+        /// <returns></returns>
         public static List<SelectListItem> GetSelectItemList(this Enum value, object selectedValue = null, string emptyChoice = "")
         {
             Type etype = value.GetType();
@@ -39,7 +46,11 @@ namespace TinyLeon.Utility
             }
             return resultList;
         }
-
+        /// <summary>
+        /// 获取枚举值的description属性
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public static string GetEnumDes(this Enum value)
         {
             if (value == null) return "";
@@ -63,7 +74,12 @@ namespace TinyLeon.Utility
             }
             return string.Empty;
         }
-
+        /// <summary>
+        /// 根据数值获取枚举值
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public static T GetEnumByValue<T>(int value) where T : struct,IConvertible
         {
             try

@@ -7,7 +7,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace TinyLeon.Utility
+namespace TinyLeon.Component.Utility
 {
     /// <summary>
     /// JSON序列化和反序列化辅助类

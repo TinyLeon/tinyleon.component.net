@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TinyLeon.Utility
+namespace TinyLeon.Component.Utility
 {
     public class DateTimeHelper
     {

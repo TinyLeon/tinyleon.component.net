@@ -95,9 +95,9 @@
       <Project>{8a6cbf52-de0c-4585-86bf-4a394eb8b94d}</Project>
       <Name>TinyLeon.Component.MongoDB</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TinyLeon.Utility\TinyLeon.Utility.csproj">
+    <ProjectReference Include="..\TinyLeon.Utility\TinyLeon.Component.Utility.csproj">
       <Project>{9e16081e-8849-49e4-ab2b-7adb716563da}</Project>
-      <Name>TinyLeon.Utility</Name>
+      <Name>TinyLeon.Component.Utility</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

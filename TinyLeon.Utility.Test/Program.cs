@@ -7,7 +7,7 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 using TinyLeon.Test.MongoDBTest;
-using TinyLeon.Utility;
+using TinyLeon.Component.Utility;
 
 namespace TinyLeon.Utility.Test
 {
