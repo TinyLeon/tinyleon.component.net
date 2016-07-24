@@ -18,8 +18,10 @@ namespace TinyLeon.Utility.Test
             //ReadDataFromMongo();
             //DistinctTest();
             //EntityToDataTable();
-            var list = TestEnum.Apple.GetSelectItemList();
-            string des = EnumHelper.GetEnumByDescription<TestEnum>("梨子").GetEnumDes();
+            //var list = TestEnum.Apple.GetSelectItemList();
+            //string des = EnumHelper.GetEnumByDescription<TestEnum>("梨子").GetEnumDes();
+
+            EncryptionTest();
         }
 
         private static void Jsonserialize()
@@ -77,6 +79,13 @@ namespace TinyLeon.Utility.Test
             ExcelHelper eh = new ExcelHelper(@"E:\myExcel.xlsx");
             DataTable dt = eh.EntityToDataTable<Person>(personList);
             eh.DataTableToExcel(dt, "Person", true);
+        }
+
+        public static void EncryptionTest()
+        {
+            string plainText = "a123456789";
+            string cipherText = EncryptHelper.AESEncrypt(plainText);
+            plainText = EncryptHelper.AESDecrypt(cipherText);
         }
     }
 
