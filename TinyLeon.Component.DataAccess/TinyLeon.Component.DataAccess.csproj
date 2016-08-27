@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DCE114C4-A7AF-4518-BD91-1F9FB561C6DC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TinyLeon.Component.DataAccess</RootNamespace>
+    <AssemblyName>TinyLeon.Component.DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper">
+      <HintPath>..\packages\Dapper.1.50.2\lib\net40\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\packages\MySql.Data.6.9.9\lib\net40\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseClient.cs" />
+    <Compile Include="DapperExtension\DapperExtensions.cs" />
+    <Compile Include="DapperExtension\DapperExtensionsConfiguration.cs" />
+    <Compile Include="DapperExtension\DapperImplementor.cs" />
+    <Compile Include="DapperExtension\Database.cs" />
+    <Compile Include="DapperExtension\GetMultiplePredicate.cs" />
+    <Compile Include="DapperExtension\GetMultipleResult.cs" />
+    <Compile Include="DapperExtension\Mapper\AutoClassMapper.cs" />
+    <Compile Include="DapperExtension\Mapper\ClassMapper.cs" />
+    <Compile Include="DapperExtension\Mapper\PluralizedAutoClassMapper.cs" />
+    <Compile Include="DapperExtension\Mapper\PropertyMap.cs" />
+    <Compile Include="DapperExtension\Predicates.cs" />
+    <Compile Include="DapperExtension\ReflectionHelper.cs" />
+    <Compile Include="DapperExtension\Sql\MySqlDialect.cs" />
+    <Compile Include="DapperExtension\Sql\PostgreSqlDialect.cs" />
+    <Compile Include="DapperExtension\Sql\SqlCeDialect.cs" />
+    <Compile Include="DapperExtension\Sql\SqlDialectBase.cs" />
+    <Compile Include="DapperExtension\Sql\SqlGenerator.cs" />
+    <Compile Include="DapperExtension\Sql\SqliteDialect.cs" />
+    <Compile Include="DapperExtension\Sql\SqlServerDialect.cs" />
+    <Compile Include="MySqlClient.cs" />
+    <Compile Include="SqlClient.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dapper\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

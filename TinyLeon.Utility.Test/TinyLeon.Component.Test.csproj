@@ -84,13 +84,19 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="App_Data\TinyLeonConfig\MongodbConfig.config">
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\TinyLeon.Component.DataAccess\TinyLeon.Component.DataAccess.csproj">
+      <Project>{dce114c4-a7af-4518-bd91-1f9fb561c6dc}</Project>
+      <Name>TinyLeon.Component.DataAccess</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TinyLeon.Component.MongoDB\TinyLeon.Component.MongoDB.csproj">
       <Project>{8a6cbf52-de0c-4585-86bf-4a394eb8b94d}</Project>
       <Name>TinyLeon.Component.MongoDB</Name>

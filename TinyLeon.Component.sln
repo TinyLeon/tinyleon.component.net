@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinyLeon.Component.MongoDB"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinyLeon.Sort", "TinyLeon.Sort\TinyLeon.Sort.csproj", "{D5EEB83F-E571-496E-AD74-230A621B471F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinyLeon.Component.DataAccess", "TinyLeon.Component.DataAccess\TinyLeon.Component.DataAccess.csproj", "{DCE114C4-A7AF-4518-BD91-1F9FB561C6DC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{D5EEB83F-E571-496E-AD74-230A621B471F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5EEB83F-E571-496E-AD74-230A621B471F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5EEB83F-E571-496E-AD74-230A621B471F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCE114C4-A7AF-4518-BD91-1F9FB561C6DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCE114C4-A7AF-4518-BD91-1F9FB561C6DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCE114C4-A7AF-4518-BD91-1F9FB561C6DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCE114C4-A7AF-4518-BD91-1F9FB561C6DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
