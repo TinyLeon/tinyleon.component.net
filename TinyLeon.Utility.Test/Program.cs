@@ -25,8 +25,8 @@ namespace TinyLeon.Utility.Test
             //var list = TestEnum.Apple.GetSelectItemList();
             //string des = EnumHelper.GetEnumByDescription<TestEnum>("梨子").GetEnumDes();
 
-            //EncryptionTest();
-            DataAccessTest();
+            EncryptionTest();
+            //DataAccessTest();
         }
 
         private static void Jsonserialize()
@@ -88,7 +88,7 @@ namespace TinyLeon.Utility.Test
 
         public static void EncryptionTest()
         {
-            string plainText = "a123456789";
+            string plainText = "pp47026791";
             string cipherText = EncryptHelper.AESEncrypt(plainText);
             plainText = EncryptHelper.AESDecrypt(cipherText);
         }
