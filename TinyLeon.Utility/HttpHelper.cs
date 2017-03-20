@@ -157,5 +157,55 @@ namespace TinyLeon.Component.Utility
             }
             return result;
         }
+
+        /// <summary>
+        /// http请求
+        /// </summary>
+        /// <param name="url"></param>
+        /// <param name="data"></param>
+        /// <param name="reqContentType">请求内容类型：application/json application/xml application/x-www-form-urlencoded </param>
+        /// <returns></returns>
+        public static string GetResponse(string url, string data, string reqContentType)
+        {
+            string result = string.Empty;
+
+            if (string.IsNullOrWhiteSpace(url))
+            {
+                throw new System.Exception("url为空");
+            }
+
+            data = data ?? string.Empty;
+            byte[] packet = Encoding.UTF8.GetBytes(data);
+
+            var req = (HttpWebRequest)WebRequest.Create(url);
+            req.Method = "POST";
+            req.ContentType = reqContentType;
+            req.ContentLength = packet.Length;
+            req.Timeout = 5000;
+            if (packet.Length > 0)
+            {
+                using (var reqStream = req.GetRequestStream())
+                {
+                    reqStream.Write(packet, 0, packet.Length);
+                }
+            }
+            using (var res = req.GetResponse())
+            {
+                var response = res as HttpWebResponse;
+                if (response != null && response.StatusCode == HttpStatusCode.OK)
+                {
+                    using (var resStream = response.GetResponseStream())
+                    {
+                        if (resStream != null)
+                        {
+                            var reader = new StreamReader(resStream, Encoding.UTF8);
+                            result = reader.ReadToEnd();
+                        }
+                    }
+                }
+            }
+
+            return result;
+        }
     }
 }
